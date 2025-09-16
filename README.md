@@ -1,1 +1,2 @@
-# Rishi-Tech
+#Mountain Hikes.
+Welcome to the Mountain Hikes .
