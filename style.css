@@ -1,0 +1,116 @@
+/* Limit carousel size */
+#carouselExampleCaptions {
+  max-width: 950px; /* adjust width */
+  max-height: 450px; /* adjust height */
+  margin: auto; /* center it */
+  overflow: hidden; /* hide extra part */
+}
+
+/* Resize images inside carousel */
+#carouselExampleCaptions img {
+  height: 300px; /* same as carousel height */
+  object-fit: cover; /* crop without distortion */
+}
+.card {
+  margin: 5px; /* decrease space */
+}
+
+.card {
+  width: 18rem;
+  height: 28rem; /* set same height */
+}
+.sticky-top {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 1020;
+}
+.SectionTitle_sectionTitleContainer__Mxtic {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 2px solid #ffc100;
+  text-align: left;
+  font-style: normal;
+  color: #000;
+  padding-bottom: 0.5em;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+* {
+  border-color: hsl(var(--border));
+}
+.ThreeColumnText_cardContainer__akggi {
+  display: flex;
+  align-items: center;
+}
+
+.carousel-item {
+  position: relative;
+}
+.carousel-caption {
+  z-index: 10;
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+.carousel-caption h5 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+.carousel-caption p {
+  font-size: 1.2rem;
+}
+.carousel video {
+  width: 950px; /* adjust width */
+  height: auto; /* adjust height */
+  margin: auto;
+  overflow: hidden;
+}
+
+.carousel-caption {
+  bottom: 30% !important; /* adjust vertical position */
+  left: 5% !important; /* move text to left side */
+  right: auto !important; /* cancel Bootstrap's right alignment */
+  transform: translateY(50%);
+  font-family: Algebra;
+  /* align text to left */
+}
+.card {
+  height: 350px; /* adjust as needed */
+}
+.form-control {
+  display: block;
+  width: 100%;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--bs-body-color);
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: var(--bs-body-bg);
+  background-clip: padding-box;
+  border: var(--bs-border-width) solid var(--bs-border-color);
+  border-radius: var(--bs-border-radius);
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+@media (min-width: 768px) {
+  .elementor-6808 .elementor-element.elementor-element-21f715e0 {
+    --width: 100%;
+  }
+}
+.elementor-6808 .elementor-element.elementor-element-21f715e0 {
+  --display: flex;
+  --flex-direction: column;
+  --container-widget-width: 100%;
+  --container-widget-height: initial;
+  --container-widget-flex-grow: 0;
+  --container-widget-align-self: initial;
+  --flex-wrap-mobile: wrap;
+}
