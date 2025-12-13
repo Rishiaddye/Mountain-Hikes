@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Inquiry Form - Mountain Hikes</title>
+
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{
+      background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);
+      min-height:100vh;
+      font-family:Segoe UI, sans-serif;
+      display:flex;align-items:center;justify-content:center;
+      padding:20px;
+    }
+    .container-wrapper{width:100%;max-width:700px}
+    .form-container{
+      background:white;border-radius:20px;
+      box-shadow:0 20px 60px rgba(0,0,0,.3);
+      overflow:hidden;animation:slideUp .6s ease-out;
+    }
+    @keyframes slideUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
+
+    .form-header{
+      background:linear-gradient(135deg,rgba(0,100,50,.4),rgba(0,150,80,.4)),
+      url('https://images.pexels.com/photos/1619317/pexels-photo-1619317.jpeg?auto=compress&cs=tinysrgb&w=1000') center/cover;
+      color:white;padding:40px 30px;text-align:center;
+    }
+
+    .form-body{padding:40px}
+    .form-group{margin-bottom:25px}
+    label{font-weight:600;margin-bottom:10px;display:block}
+    .form-control{
+      border:2px solid #e0e0e0;border-radius:10px;padding:12px 15px;
+    }
+
+    /* 🔥 Button animation */
+    .btn-submit{
+      background:linear-gradient(135deg,#00843d,#00c853);
+      color:white;border:none;width:100%;
+      padding:15px;border-radius:10px;font-size:1.1rem;
+      transition:.3s ease; position:relative; overflow:hidden;
+    }
+    .btn-submit.loading{
+      opacity:0.7;
+      pointer-events:none;
+    }
+    .btn-submit.loading::after{
+      content:"";
+      position:absolute;
+      width:20px;height:20px;
+      border:3px solid white;
+      border-top-color:transparent;
+      border-radius:50%;
+      top:50%;left:50%;
+      transform:translate(-50%,-50%);
+      animation:spin 0.8s linear infinite;
+    }
+    @keyframes spin{to{transform:translate(-50%,-50%) rotate(360deg)}}
+
+    /* 🌟 Success Popup */
+    #successModal{
+      position:fixed;
+      top:0;left:0;width:100%;height:100%;
+      background:rgba(0,0,0,.6);
+      display:none;align-items:center;justify-content:center;
+      animation:fadeIn .3s ease;
+    }
+    @keyframes fadeIn{from{opacity:0}to{opacity:1}}
+    .modal-box{
+      background:white;padding:30px;
+      width:90%;max-width:400px;
+      border-radius:15px;text-align:center;
+      animation:popUp .4s ease;
+    }
+    @keyframes popUp{from{opacity:0;transform:scale(0.8)}to{opacity:1;transform:scale(1)}}
+    .modal-box h2{color:#00843d;margin-bottom:10px}
+  </style>
+</head>
+
+<body>
+
+  <!-- 🌟 Confirmation Popup Modal -->
+  <div id="successModal">
+    <div class="modal-box">
+      <h2>✓ Inquiry Sent!</h2>
+      <p>Your adventure inquiry has been submitted successfully.</p>
+      <button class="btn btn-success mt-3" id="closeModal">OK</button>
+    </div>
+  </div>
+
+  <div class="container-wrapper">
+    <div class="form-container">
+
+      <div class="form-header">
+        <img src="images/logo3.png" width="80">
+        <h1>Adventure Awaits!</h1>
+        <p>Tell us about your hiking dreams</p>
+      </div>
+
+      <div class="form-body">
+
+        <form id="inquiryForm">
+          
+          <div class="form-row" style="display:grid;grid-template-columns:1fr 1fr;gap:20px">
+            <div class="form-group">
+              <label>Full Name *</label>
+              <input type="text" id="name" class="form-control" required>
+            </div>
+            <div class="form-group">
+              <label>Email *</label>
+              <input type="email" id="email" class="form-control" required>
+            </div>
+          </div>
+
+          <div class="form-row" style="display:grid;grid-template-columns:1fr 1fr;gap:20px">
+            <div class="form-group">
+              <label>Phone *</label>
+              <input type="tel" id="phone" class="form-control" required>
+            </div>
+            <div class="form-group">
+              <label>Destination *</label>
+              <select id="destination" class="form-control" required>
+                <option value="">Select</option>
+                <option>Himalayas</option>
+                <option>Western Ghats</option>
+                <option>Aravalli Range</option>
+                <option>Northeast Mountains</option>
+                <option>Other</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-row" style="display:grid;grid-template-columns:1fr 1fr;gap:20px">
+            <div class="form-group">
+              <label>Difficulty *</label>
+              <select id="difficulty" class="form-control" required>
+                <option value="">Select</option>
+                <option>Beginner</option>
+                <option>Intermediate</option>
+                <option>Advanced</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Date *</label>
+              <input type="date" id="date" class="form-control" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>Message *</label>
+            <textarea id="message" rows="4" class="form-control" required></textarea>
+          </div>
+
+          <button type="submit" id="submitBtn" class="btn-submit">Send Inquiry ⛰️</button>
+
+        </form>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== FIREBASE SCRIPT ========== -->
+  <script type="module">
+
+    import { db } from "./firebase-config.js";
+    import { collection, addDoc } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
+
+    const form = document.getElementById("inquiryForm");
+    const btn = document.getElementById("submitBtn");
+
+    const modal = document.getElementById("successModal");
+    const closeModal = document.getElementById("closeModal");
+
+    closeModal.onclick = () => (modal.style.display = "none");
+
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+
+      btn.classList.add("loading");
+
+      try {
+        await addDoc(collection(db, "inquiries"), {
+          name: name.value,
+          email: email.value,
+          phone: phone.value,
+          destination: destination.value,
+          difficulty: difficulty.value,
+          date: date.value,
+          message: message.value,
+          timestamp: new Date().toISOString()
+        });
+
+        form.reset();
+        modal.style.display = "flex"; // 🌟 show popup
+
+      } catch (err) {
+        alert("Error saving inquiry.");
+        console.error(err);
+      }
+
+      btn.classList.remove("loading");
+
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Register - Mountain Hikes</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);min-height:100vh;font-family:Segoe UI, Tahoma, Geneva, Verdana, sans-serif;display:flex;align-items:center;justify-content:center;padding:20px}
+    .container-wrapper{width:100%;max-width:700px}
+    .form-container{background:white;border-radius:20px;box-shadow:0 20px 60px rgba(0,0,0,.3);overflow:hidden;animation:slideUp .6s ease-out}
+    .form-header{background:linear-gradient(135deg,rgba(0,100,50,.4) 0%,rgba(0,150,80,.4) 100%), url('https://images.pexels.com/photos/1619317/pexels-photo-1619317.jpeg?auto=compress&cs=tinysrgb&w=1000') center/cover;color:white;padding:40px 30px;text-align:center}
+    .form-body{padding:40px}
+    .form-group{margin-bottom:25px}
+    label{font-weight:600;display:block;margin-bottom:8px}
+    .form-control{border:2px solid #e0e0e0;border-radius:10px;padding:12px 15px}
+    .btn-submit{background:linear-gradient(135deg,#00843d 0%,#00c853 100%);color:white;padding:15px;border-radius:10px;width:100%;border:none;font-size:1.05rem}
+    .alert{margin-top:15px;border-radius:10px}
+  </style>
+</head>
+<body>
+  <div class="container-wrapper">
+    <div class="form-container">
+      <div class="form-header">
+        <div class="mountain-icon"><img src="images/logo3.png" alt="Logo" width="80" height="60"></div>
+        <h1>Register Now</h1>
+        <p>Join Mountain Hikes & Start Your Adventure</p>
+      </div>
+
+      <div class="form-body">
+        <div id="successMessage" class="alert alert-success d-none"></div>
+        <div id="errorMessage" class="alert alert-danger d-none"></div>
+
+        <form id="registerForm" novalidate>
+          <div class="form-group">
+            <label for="fullname">Full Name *</label>
+            <input id="fullname" class="form-control" required>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email Address *</label>
+            <input id="email" type="email" class="form-control" required>
+          </div>
+
+          <div class="form-group">
+            <label for="password">Password *</label>
+            <input id="password" type="password" class="form-control" required>
+          </div>
+
+          <div class="form-group">
+            <input id="agree" type="checkbox" required>
+            <label for="agree">I agree to the terms &amp; conditions</label>
+          </div>
+
+          <button type="submit" id="submitBtn" class="btn-submit">Register</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script type="module">
+    import { auth, db } from "./firebase-config.js";
+    import { createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js";
+    import { collection, addDoc } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
+
+    const form = document.getElementById('registerForm');
+    const submitBtn = document.getElementById('submitBtn');
+    const successMessage = document.getElementById('successMessage');
+    const errorMessage = document.getElementById('errorMessage');
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      successMessage.classList.add('d-none');
+      errorMessage.classList.add('d-none');
+
+      const fullname = document.getElementById('fullname').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const password = document.getElementById('password').value;
+
+      if (!fullname || !email || !password) {
+        errorMessage.textContent = 'Please fill in all required fields.';
+        errorMessage.classList.remove('d-none');
+        return;
+      }
+
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Registering...';
+
+      try {
+        // create user in Firebase Auth
+        const userCredential = await createUserWithEmailAndPassword(auth, email, password);
+        const user = userCredential.user;
+
+        // Save user info to Firestore (make sure Firestore rules allow this)
+        await addDoc(collection(db, 'users'), {
+          fullname,
+          email,
+          uid: user.uid,
+          createdAt: new Date().toISOString()
+        });
+
+        successMessage.textContent = 'Registration successful! You are now signed in.';
+        successMessage.classList.remove('d-none');
+        form.reset();
+
+      } catch (err) {
+        console.error('Register error', err);
+        // Provide user friendly messages for common errors
+        if (err && err.code === 'auth/email-already-in-use') {
+          errorMessage.textContent = 'That email is already in use. Try signing in or reset your password.';
+        } else if (err && err.code === 'auth/invalid-email') {
+          errorMessage.textContent = 'Invalid email address.';
+        } else {
+          errorMessage.textContent = err.message || 'Registration failed. Try again.';
+        }
+        errorMessage.classList.remove('d-none');
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Register';
+      }
+    });
+  </script>
+</body>
+</html>

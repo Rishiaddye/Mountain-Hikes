@@ -1,0 +1,908 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Mountain ikes Website</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+  </head>
+
+  <body class="bg-black" >
+    
+    <header id="full_name" class="banner_header">
+  <nav class="navbar navbar-expand-lg py-3 ">
+    <div class="container-fluid px-5">
+      
+      <!-- Logo -->
+      <a class="navbar-brand d-flex align-items-center" href="#">
+        <img src="images/logo3.png" alt="Logo" width="70" height="45" class="me-2">
+        <h2 class="m-0 text-white fw-bold">Mountain Hikes</h2>
+      </a>
+
+      <!-- Mobile Toggle -->
+      <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Nav Links -->
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item"><a class="nav-link active" href="#">HOME</a></li>
+          <li class="nav-item"><a class="nav-link" href="#Our Safety Rules & Precautions">OUR SAFETY RULES & PRECAUTIONS</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">ABOUT</a></li>
+          <li class="nav-item"><a class="nav-link" href="#Policies">POLICIES</a></li>
+          <li class="nav-item"><a class="nav-link" href="#Policies"></a></li>
+        <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="register.html"> <button type="button" class="btn btn-outline-primary">Register now</button></a>
+            </li>
+       
+       
+        </ul>
+
+          <!-- search bar -->
+<section class="search-bar">  <!-- added Bootstrap class to move left -->
+  <form class="d-flex" role="search">
+    <div class="search-location-container">
+      <div class="location-section">
+        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512">
+          <path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" 
+                d="M256 48c-79.5 0-144 61.39-144 137 0 87 96 224.87 131.25 272.49a15.77 15.77 0 0025.5 0C304 409.89 400 272.07 400 185c0-75.61-64.5-137-144-137z"></path>
+          <circle cx="256" cy="192" r="48" fill="none" stroke-linecap="round" 
+                  stroke-linejoin="round" stroke-width="32"></circle>
+        </svg>
+      </div>
+
+      <div class="search-section">
+        <div class="typewriter-container">
+          <input type="text" class="search-input" placeholder="Search destinations..." aria-label="Search destinations">
+          <div class="typewriter-text">Baku<span class="typewriter-cursor">|</span></div>
+        </div>
+        <div class="search-icon-container">
+          <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512">
+            <path d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"></path>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </form>
+</section>
+
+        <!-- Right Side Contact -->
+        <div class="header_right text-lg-end text-center mt-2 mt-lg-0">
+          <span class="call_text">Call Us!</span><br>
+          <span class="phone_no">+91 7684321980</span>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="top-banner">
+<p>
+  <a href="enquirey.html" style="color: white; text-decoration: none; cursor: pointer;">
+    Still confused about destination? Fill out inquiry form
+  </a>
+  <i class="bi bi-envelope-fill"></i>
+</p>
+  <button id="themeToggle" class="theme-toggle-btn" title="Toggle Light/Dark Mode">
+    <i class="bi bi-moon-stars-fill"></i>
+  </button>
+</div>
+
+    <div id="carouselExampleIndicators" class="carousel slide">
+      <div class="carousel-indicators">
+        <button
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide-to="0"
+          class="active"
+          aria-current="true"
+          aria-label="Slide 1"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide-to="1"
+          aria-label="Slide 2"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide-to="2"
+          aria-label="Slide 3"
+        ></button>
+      </div>
+      <div class="container mt-5">
+   <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <video class="d-block w-100" autoplay muted loop>
+                    <source src="/31.mp4" type="video/mp4">
+                </video>
+              <div class="carousel-caption d-block">
+                    <h5><em>Welcome to Mountain Hikes</em></h5>
+                    <p>Feel Free to enjoy the nature and its beautiful charm.</p>
+                    <a href="#booking" class="btn btn-success btn-lg">Book Your Adventure</a>
+                </div>
+    </div>
+    <div class="carousel-item">
+        <video class="d-block w-100" autoplay muted loop>
+                    <source src="/32.mp4" type="video/mp4">
+                </video>
+              <div class="carousel-caption d-block">
+                    <h5><em>Welcome to Mountain Hikes</em></h5>
+                    <p>Climb higher Breathe deeper Feel free</p>
+                    <a href="#booking" class="btn btn-success btn-lg">Book Your Adventure</a>
+                </div>
+    </div>
+    <div class="carousel-item">
+       <video class="d-block w-100" autoplay muted loop>
+                    <source src="/33.mp4" type="video/mp4">
+                </video>
+              <div class="carousel-caption d-block">
+                    <h5><em>Welcome to Mountain Hikes</em></h5>
+                    <p>The Mountains Are Calling Lets Explore.</p>
+                    <a href="#booking" class="btn btn-success btn-lg">Book Your Adventure</a>
+                </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+</div>
+
+
+ <section class="offerings my-5">
+     <div class="text-center my-5">
+  <span class="badge text-bg-info">
+    <h2 class="fw-bold text-body-emphasis fs-1">Treks We are Offering</h2>
+  </span>
+</div>
+
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-3 col-sm-6">
+          <div class="card trek-card">
+            <div class="card-img-wrapper">
+              <div class="trek-emoji">🌸</div>
+              <img src="https://media.licdn.com/dms/image/C5112AQHm2PxaQZVkxg/article-cover_image-shrink_720_1280/0/1566992855900?e=2147483647&v=beta&t=vvGVWOuwxWiVFgm3EYZg-saxzgfy6C770M0mE1sicbY" alt="Valley of Flowers">
+              <div class="card-overlay"></div>
+            </div>
+            <div class="card-body">
+              <h5 class="trek-location">Valley of Flowers National Park (Uttarakhand)</h5>
+              <p class="trek-description">Every flower here whispers — beauty blooms even in the harshest places</p>
+              <a href="https://trekthehimalayas.com/valley-of-flowers-trek" class="trek-btn">Explore Trek</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-3 col-sm-6">
+          <div class="card trek-card">
+            <div class="card-img-wrapper">
+              <div class="trek-emoji">🏔</div>
+              <img src="https://www.trekhievers.com/system/images/000/586/457/64a3648971960ba4c692c5a06c0f53fe/original/Kashmir-Great-Lakes-.jpg" alt="Kashmir Great Lakes">
+              <div class="card-overlay"></div>
+            </div>
+            <div class="card-body">
+              <h5 class="trek-location">Kashmir Great Lakes Trek (Jammu & Kashmir)</h5>
+              <p class="trek-description">These lakes don't just reflect mountains; they reflect untouched heaven</p>
+              <a href="https://www.thesearchingsouls.com/kashmir-great-lakes-trek/" class="trek-btn">Explore Trek</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-3 col-sm-6">
+          <div class="card trek-card">
+            <div class="card-img-wrapper">
+              <div class="trek-emoji">🏞</div>
+              <img src="https://res.cloudinary.com/dyiffrkzh/image/upload/c_fill,f_auto,fl_progressive.strip_profile,g_center,h_400,q_auto,w_700/v1695980635/bbj/qmgspo18nimhqjfsjqtw.jpg" alt="Hampta Pass">
+              <div class="card-overlay"></div>
+            </div>
+            <div class="card-body">
+              <h5 class="trek-location">Hampta Pass Trek (Himachal Pradesh)</h5>
+              <p class="trek-description">Every climb is a question, and every view is the answer your soul seeks</p>
+              <a href="https://www.thesearchingsouls.com/hampta-pass-trek/" class="trek-btn">Explore Trek</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-3 col-sm-6">
+          <div class="card trek-card">
+            <div class="card-img-wrapper">
+              <div class="trek-emoji">❄</div>
+              <img src="https://media1.thrillophilia.com/filestore/yhqt4zuzhpng5votft9oe1m9e6uu_dsc_0444.jpg" alt="Roopkund Trek">
+              <div class="card-overlay"></div>
+            </div>
+            <div class="card-body">
+              <h5 class="trek-location">Roopkund Trek (Uttarakhand)</h5>
+              <p class="trek-description">The frozen lake holds secrets, proving nature is the greatest storyteller</p>
+              <a href="https://www.thesearchingsouls.com/roopkund-trek/" class="trek-btn">Explore Trek</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+     
+     
+     
+  <section id="Our Safety Rules & Precautions">
+    <h1 class="p-3 mb-2 bg-info text-black text-center mt-5">Our Safety Rules & Precautions</h1>
+  </section>
+ 
+  <div class="cards-wrapper">
+    <div class="cards-inner">
+  
+      <div class="card text-bg-warning mb-3" data-aos="flip-right">
+        <div class="card-header"><h3>🌦 Weather</h3></div>
+        <div class="card-body">
+          <p class="card-text">
+            <ul>
+              <li>Check weather forecasts before starting the trek.</li>
+              <li>Carry suitable gear like raincoat, windcheater, or warm clothes.</li>
+              <li>Be alert for sudden weather changes.</li>
+            </ul>
+          </p>
+        </div>
+      </div>
+
+      <div class="card text-bg-warning mb-3" data-aos="flip-right">
+        <div class="card-header"><h3>🛤 Stay on Trail</h3></div>
+        <div class="card-body">
+          <p class="card-text">
+            <ul>
+              <li>Follow marked paths to avoid getting lost.</li>
+              <li>Prevent damage to the environment by not creating new trails.</li>
+              <li>Stay safe from wild animals or dangerous areas off the path.</li>
+            </ul>
+          </p>
+        </div>
+      </div>
+
+      <div class="card text-bg-warning mb-3" data-aos="flip-right">
+        <div class="card-header"><h3>🩹 First Aid Kits</h3></div>
+        <div class="card-body">
+          <p class="card-text">
+            <ul>
+              <li>Carry basic supplies like bandages, antiseptic, and pain relievers.</li>
+              <li>Keep personal medicines for allergies or health issues.</li>
+              <li>Learn simple first aid skills to handle minor injuries.</li>
+            </ul>
+          </p>
+        </div>
+      </div>
+
+      <div class="card text-bg-warning mb-3" data-aos="flip-right">
+        <div class="card-header"><h3>🚨 Emergency</h3></div>
+        <div class="card-body">
+          <p class="card-text">
+            <ul>
+              <li>Keep emergency contact numbers handy.</li>
+              <li>Carry a whistle, flashlight, or signaling device.</li>
+              <li>Inform someone about your trekking route and expected return time.</li>
+            </ul>
+          </p>
+        </div>
+      </div>
+
+      <div class="card text-bg-warning mb-3" data-aos="flip-right">
+        <div class="card-header"><h3>🎒 Essentials</h3></div>
+        <div class="card-body">
+          <p class="card-text">
+            <ul>
+              <li>Pack lightweight food and snacks for energy.</li>
+              <li>Keep extra batteries or a power bank for devices.</li>
+              <li>Carry water bottles, maps, and multi-tools.</li>
+            </ul>
+          </p>
+        </div>
+      </div>
+
+      <div class="card text-bg-warning mb-3" data-aos="flip-right">
+        <div class="card-header"><h3>💧 Hydration</h3></div>
+        <div class="card-body">
+          <p class="card-text">
+            <ul>
+              <li>Drink water regularly to prevent dehydration.</li>
+              <li>Carry enough clean drinking water or purification tablets.</li>
+              <li>Avoid drinking directly from rivers or lakes without treating it.</li>
+            </ul>
+          </p>
+        </div>
+      </div>
+    
+    </div>
+  </div>
+
+  
+<section id="about" class="py-5 bg-black subtle text-white mb-0">
+  <div class="container">
+
+<div class="row align-items-start mb-5">
+  <!-- Left: badge / title -->
+  <div class="col-md-4 d-flex justify-content-start justify-content-center mb-3 mb-md-0" >
+    <span class="badge text-bg-info px-3 py-2" style="margin-right:20px;">
+      <h2 class="fw-bold text-body-emphasis m-0 fs-1">About Mountain Hikes</h2>
+    </span>
+  </div>
+
+  
+     <div class="d-flex justify-content-center flex-wrap gap-4" style="margin-right: 600px;">
+      <div class="col-lg-4 col-md-5 text-center text-md-start">
+        <div class="features-icon-border d-flex justify-content-start">
+  <div class="features-icon">
+    <img src="images/adventurer (1).png" alt="icon" class="img-fluid" style="width:400px; height:auto;">
+</div>
+</div>
+      </div>
+
+<div class="col-md-8 mt-md-1 " style="padding-right: 50px; margin-top: 200px;">
+  
+  <p class="text-muted mb-0 fs-4 fst-italic">
+    <strong class=" text-white">
+      We organize safe, exciting, and eco-friendly trekking experiences across breathtaking trails.
+      Whether you’re a beginner or a seasoned trekker, our team ensures that you explore mountains
+      with the right guidance, essential safety measures, and a spirit of adventure.
+    </strong> 
+  </p>
+</div>
+    
+        <!-- Card 1 -->
+        <div data-aos="zoom-in-left">   
+        <div class="card border-0 shadow-lg p-3 bg-light hover-shadow" style="width: 18rem;">
+          <img src="/21.jpg" class="card-img-top rounded-4" alt="Eco Friendly Trek" />
+          <div class="card-body">
+            <h4 class="fw-bold mt-3">Eco-Friendly</h4>
+            <p class="text-muted"><i>We respect nature and follow Leave No Trace principles on all treks.</i></p>
+          </div>
+        </div>
+           </div> 
+
+  
+        <!-- Card 2 -->
+         <div data-aos="zoom-in-right">
+        <div class="card border-0 shadow-lg p-3 bg-light hover-shadow " style="width: 18rem;">
+          <img src="/35.jpg" class="card-img-top rounded-4" alt="Expert Guidance" />
+          <div class="card-body">
+            <h4 class="fw-bold mt-3">Expert Guidance</h4>
+            <p class="text-muted"><i>Led by experienced trekkers to keep your adventure safe and memorable.</i></p>
+          </div>
+        </div>
+        </div>
+
+              <div class="col-md-8 mt-md-1" style="padding-right: 50px; margin-top: 200px;">
+
+  <p class="text-muted mb-0 fs-4 fst-italic">
+    <strong class=" text-white">
+     Every journey is safer and more enjoyable with the right guidance. Our experienced trek leaders and certified instructors ensure you’re prepared, confident, and well-supported. From navigation to safety tips, we’re here to make your mountain experience unforgettable and secure.
+    </strong> 
+  </p>
+</div>
+
+
+        <div class="col-md-8 mt-md-1" style="padding-right: 50px; margin-top: 200px;">
+
+  <p class="text-muted mb-0 fs-4 fst-italic">
+    <strong class=" text-white">
+     Mountains bring people together. We create a strong community of trekkers who share stories, support one another, and grow together. Whether you come alone or with friends, you’ll leave with memories and lifelong bonds built on shared adventure.
+    </strong> 
+  </p>
+</div>
+
+        <!-- Card 3 -->
+         <div data-aos="zoom-in-left">  
+        <div class="card border-0 shadow-lg p-3 bg-light hover-shadow" style="width: 18rem;">
+          <img src="/36.jpg" class="card-img-top rounded-4" alt="Trekking Community" />
+          <div class="card-body">
+            <h4 class="fw-bold mt-3">Community</h4>
+            <p class="text-muted"><i>Meet fellow trekking enthusiasts and create lifelong connections.</i></p>
+          </div>
+        </div>
+      </div> 
+
+               <!-- Card 4 -->
+                   <div data-aos="zoom-in-right">
+        <div class="card border-0 shadow-lg p-3 bg-light hover-shadow" style="width: 18rem;">
+          <img src="images/happy for all.jpg" class="card-img-top rounded-4" alt="Expert Guidance" />
+          <div class="card-body">
+            <h4 class="fw-bold mt-3">Adventure for All</h4>
+            <p class="text-muted"><i>Led by experienced trekkers to keep your adventure safe and memorable.</i></p>
+          </div>
+        </div>
+        </div>
+
+              <div class="col-md-8 mt-md-1" style="padding-right: 50px; margin-top: 200px;">
+
+  <p class="text-muted mb-0 fs-4 fst-italic">
+    <strong class=" text-white">
+    At Mountain Hikes, we believe adventure belongs to everyone. Whether you’re taking your first step on a trail or conquering your hundredth peak, our treks are designed for all skill levels. From easy scenic walks to challenging climbs, we ensure every hiker experiences the thrill of the mountains safely and confidently.
+  </p>
+</div>
+</div>  
+    </div>
+        <!-- Call to Action -->
+    <div class="text-center mt-5 mb-5 pb-5" style="margin-left: 500px;">
+      <a href="#contact" class="btn btn-info text-white fw-bold px-4 py-2 shadow-sm rounded-pill">
+        Join Our Next Trek 🌄
+      </a>
+    </div>
+
+  </div>
+</section>
+
+ <section class="gallery">
+        <div class="gallery-container">
+           <div class="heading-container">
+        <h1 class="gallery-title">Mountain Hike Destinations</h1>
+        
+        <div class="underline"></div>
+        
+        <p class="subtitle"> <span class="accent"> Discover epic trails and breathtaking peaks awaiting your next adventure</span> </p>
+    </div>
+            <br>
+            
+            <div class="gallery-grid">
+                <!-- Gallery Item 1 -->
+                <div class="gallery-item">
+                    <img src="https://www.trvme.com/img/tours/vietnam-adventure-im1.jpg">
+                    <div class="gallery-overlay">
+                        <h3>VIETNAM</h3>
+                        <p>Adventure</p>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 2 -->
+                <div class="gallery-item">
+                    <img src="https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/0a/35/12/1b.jpg" alt="Alpine Trail">
+                    <div class="gallery-overlay">
+                        <h3>SINGAPORE</h3>
+                        <p>Adventure</p>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 3 -->
+                <div class="gallery-item">
+                    <img src="https://media.tacdn.com/media/attractions-splice-spp-674x446/06/96/6e/04.jpg" alt="Rocky Mountains">
+                    <div class="gallery-overlay">
+                        <h3>BALI</h3>
+                        <p>Adventure</p>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 4 -->
+                <div class="gallery-item">
+                    <img src="https://www.trekhievers.com/system/images/000/709/756/a8dadaf30733cfb7509571e5b521f0f0/original/Meghalaya_1.jpg" alt="Andes Trek">
+                    <div class="gallery-overlay">
+                        <h3>MEGHALAYA</h3>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 5 -->
+                <div class="gallery-item">
+                    <img src="https://propguide.proptiger.com/wp-content/uploads/2014/04/DELHI1.jpg" alt="Patagonia">
+                    <div class="gallery-overlay">
+                        <h6>Gateways From</h6>
+                        <h3>DELHI</h3>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 6 -->
+                <div class="gallery-item">
+                    <img src="https://www.trippertrails.in/blog/wp-content/uploads/2025/05/10-Enchanting-Hill-Stations-for-Weekend-Getaways-from-Bangalore.jpg" alt="Getaways from Base Camp">
+                    <div class="gallery-overlay">
+                       <h6>Getaways From</h6>  
+                      <h2>BANGALORE</h2>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 7 -->
+                <div class="gallery-item">
+                    <img src="https://www.stayvista.com/blog/wp-content/uploads/2023/11/nature-photographer-29ezCWtMtnM-unsplash-1-scaled-1.jpg" alt="Kilimanjaro">
+                    <div class="gallery-overlay">
+                         <h6>Getaways From</h6>  
+                      <h3>SOUTH INDIA</h3>                
+                    </div>
+                </div>
+
+                <!-- Gallery Item 8 -->
+                <div class="gallery-item">
+                    <img src="https://s3.india.com/travel/wp-content/uploads/2015/02/Lonavala.jpg" alt="Getaways from Base Camp">
+                    <div class="gallery-overlay">
+                        <h6>Getaways From</h6>  
+                      <h3>PUNE</h3> 
+                    </div>
+                </div>
+
+                <!-- Gallery Item 9 -->
+                <div class="gallery-item">
+                    <img src="https://www.thepalaceonwheels.org/storage/Spiti.jpg" alt="Getaways from Base Camp">
+                    <div class="gallery-overlay">
+                        <h6>Getaways From</h6>  
+                      <h3>NORTH INDIA</h3> 
+                    </div>
+                </div>
+
+                <!-- Gallery Item 10 -->
+                <div class="gallery-item">
+                    <img src="https://www.holidify.com/images/cmsuploads/compressed/shutterstock_1267308565_20190823104713.jpg" alt="Getaways from Base Camp">
+                    <div class="gallery-overlay">
+                        <h6>Getaways From</h6>  
+                      <h3>RAJASTHAN</h3> 
+                    </div>
+                </div>
+
+                <!-- Gallery Item 11 -->
+                <div class="gallery-item">
+                    <img src="https://seoimgak.mmtcdn.com/blog/sites/default/files/mumbai_2.jpg" alt="Getaways from Base Camp">
+                    <div class="gallery-overlay">
+                       <h6>Getaways From</h6>  
+                      <h3>MUMBAI</h3> 
+                    </div>
+                </div>
+
+                <!-- Gallery Item 12 -->
+                <div class="gallery-item">
+                    <img src="https://hwwtreks.com/uploads/0000/417/2021/08/02/less-crowd.jpg" alt="Getaways from Base Camp">
+                    <div class="gallery-overlay">
+                      <h3>HIMALAYAN</h3> 
+                         <h6>Treks</h6>  
+                    </div>
+                </div>
+
+                <!-- Gallery Item 13 -->
+                <div class="gallery-item">
+                    <img src="https://www.kayak.co.in/rimg/dimg/dynamic/76/2018/08/b2e7d494ac7cb741d9b0d854c5fe576d.webp" alt="Getaways from Base Camp">
+                    <div class="gallery-overlay">
+                        <h3>BHUTAN</h3>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 14 -->
+                <div class="gallery-item">
+                    <img src="https://www.rei.com/dam/harnois_041918_1182-backpacking-tips-for-women-hero-lg.jpg" alt="Getaways from Base Camp">
+                    <div class="gallery-overlay">
+                        <h3>INTERNATIONAL</h3>
+                        <p>Treks</p>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 15 -->
+                <div class="gallery-item">
+                    <img src="https://t4.ftcdn.net/jpg/08/24/28/41/360_F_824284185_sYzxo3RmMqAlbGiADOchP8BtyLcgr9z5.jpg" alt="Getaways from Base Camp">
+                    <div class="gallery-overlay">
+                        <h3>CAMPING</h3>
+                        <p>Events</p>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 16 -->
+                <div class="gallery-item">
+                    <img src="https://mirai-no-mori.jp/wp-content/uploads/2024/10/20241013_097-600x400.jpg" alt="Summit Treks">
+                    <div class="gallery-overlay">
+                        <h3>GATHER UP</h3>
+                        <h6>Community Events</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- Policies Section -->
+<section id="Policies" class="py-5 bg-black" >
+  <div class="container-fluid"> <!-- changed to container-fluid for full width -->
+    <!-- Title -->
+    <h1 class="text-center mb-5">
+      <span class="badge text-bg-info fs-1 px-5 py-3 shadow-lg rounded-pill">Policies</span>
+    </h1>
+
+    <!-- Wider Card -->
+    <div class="card border-0 shadow-lg rounded-5 mx-auto py-5" 
+         style="width: 95%; height:auto; background-color: #fff; backdrop-filter: blur(6px);">
+      <div class="card-body px-5 py-4">
+        <h3 class="fw-bold text-success-emphasis mb-4 text-decoration-underline text-center">
+          General Terms and Conditions – Trekup India
+        </h3>
+        <br>
+        <p class="fs-5 mb-4">
+          These general terms and conditions, which may be updated or amended from time to time, apply to all services provided by Trekup India.
+        </p>
+
+        <p class="fs-5 mb-4">
+          By accessing, browsing, using, or completing a reservation through our website or mobile platform, you acknowledge that you have read, understood, and agreed to all trek-related terms and conditions set forth by Trekup India.
+        </p>
+
+        <p class="fs-5 mb-4">
+          A binding agreement between the customer and Trekup India is established once full payment has been received and a Confirmation Invoice has been issued by Trekup India.
+        </p>
+
+        <p class="fs-5">
+          The individual making the booking, whether for themselves or on behalf of other participants, accepts these terms and conditions on behalf of all members included in the reservation. This individual is also fully responsible for ensuring that the total payment is made in full.
+        </p><br>
+   <div class="container my-5">
+  <div class="row justify-content-center g-5">
+
+    <!-- Card 1 -->
+     <div class="policy-grid">
+     <div data-aos="zoom-out-up">
+    <div class="col-md-5">
+      <div class="row g-0 border rounded overflow-hidden flex-md-row shadow-sm position-relative"
+           style="max-width: 600px; margin: 0 auto; font-size: 0.9rem;">
+        <div class="col p-3 d-flex flex-column position-static">
+          <strong class="mb-1 text-primary-emphasis" style="font-size: 1.2rem;">Health & Fitness Policy</strong>
+          <p class="card-text mb-auto" style="font-size: 0.9rem;">
+            <i> Stay strong, safe, and energized—our treks are designed to boost your fitness while you explore breathtaking trails.</i>
+          </p>
+          <a href="https://himalayashelter.com/safety-measures-during-a-trek" class="icon-link gap-1 icon-link-hover stretched-link" style="font-size: 0.9rem; color: #7CFC00;">
+           Continue reading
+  <svg class="bi" aria-hidden="true"><use xlink:href="#chevron-right"></use></svg>
+</a>
+        </div>
+        <div class="col-auto d-none d-lg-block">
+          <img src="images/fitness.jpg" alt="Trek Image" width="190" height="198" class="rounded-end">
+        </div>
+      </div>
+    </div>
+    </div>
+
+    <!-- Card 2 -->
+       <div data-aos="zoom-out-up">
+    <div class="col-md-5">
+      <div class="row g-0 border rounded overflow-hidden flex-md-row shadow-sm position-relative"
+           style="max-width: 600px; margin: 0 auto; font-size: 0.9rem;">
+        <div class="col p-3 d-flex flex-column position-static">
+           <strong class="mb-1 text-primary-emphasis" style="font-size: 1.2rem;">Child & Group Policy</strong>
+          <p class="card-text mb-auto" style="font-size: 0.9rem;">
+            <i> Ensure safe and joyful adventures for kids and groups with tailored activities and attentive guides.</i>
+          </p>
+             <a href="https://adventure-pulse.com/blog/parent-child-treks-himalayas/" class="icon-link gap-1 icon-link-hover stretched-link" 
+   style="font-size: 0.9rem; color: #7CFC00;">
+  Continue reading
+  <svg class="bi" aria-hidden="true"><use xlink:href="#chevron-right"></use></svg>
+</a>
+        </div>
+        <div class="col-auto d-none d-lg-block">
+          <img src="/frontend/child.jpg" alt="Eco Trek Image" width="190" height="198" class="rounded-end">
+        </div>
+      </div>
+    </div>
+    </div>
+
+     <!-- Card 3 -->
+   <div data-aos="zoom-out-up">
+    <div class="col-md-5">
+      <div class="row g-0 border rounded overflow-hidden flex-md-row shadow-sm position-relative"
+           style="max-width: 600px; margin: 0 auto; font-size: 0.9rem;">
+        <div class="col p-3 d-flex flex-column position-static">
+          <strong class="mb-1 text-primary-emphasis" style="font-size: 1.2rem;">Booking & Cancellation Policy</strong>
+          <p class="card-text mb-auto" style="font-size: 0.9rem;">
+            <i> Plan your trek with confidence—flexible booking options and clear cancellation guidelines for peace of mind.</i>
+          </p>
+           <a href="https://www.shutterstock.com/search/cancel-client" class="icon-link gap-1 icon-link-hover stretched-link" 
+   style="font-size: 0.9rem; color: #7CFC00;">
+  Continue reading
+  <svg class="bi" aria-hidden="true"><use xlink:href="#chevron-right"></use></svg>
+</a>
+        </div>
+        <div class="col-auto d-none d-lg-block">
+          <img src="/frontend/images/booking.jpg" alt="Eco Trek Image" width="190" height="198" class="rounded-end">
+        </div>
+      </div>
+    </div>
+    </div>
+
+
+     <!-- Card 4 -->
+       <div data-aos="zoom-out-up">
+    <div class="col-md-5">
+      <div class="row g-0 border rounded overflow-hidden flex-md-row shadow-sm position-relative"
+           style="max-width: 600px; margin: 0 auto; font-size: 0.9rem;">
+        <div class="col p-3 d-flex flex-column position-static">
+      <strong class="mb-1 text-primary-emphasis" style="font-size: 1.2rem;">Refund Policy</strong>
+          <p class="card-text mb-auto" style="font-size: 0.9rem;">
+            <i>Enjoy worry-free trekking with our fair and transparent refund process for any unforeseen changes.</i>
+          </p>
+        <a href="https://www.treksandtrails.org/refund-policy-cancellation-policy" class="icon-link gap-1 icon-link-hover stretched-link" 
+   style="font-size: 0.9rem; color: #7CFC00;">
+  Continue reading
+  <svg class="bi" aria-hidden="true"><use xlink:href="#chevron-right"></use></svg>
+</a>
+
+        </div>
+        <div class="col-auto d-none d-lg-block">
+          <img src="images/refund2.png" alt="Eco Trek Image" width="190" height="200" class="rounded-end">
+        </div>
+      </div>
+    </div>
+    </div>
+
+       <!-- Card 3 -->
+   <div data-aos="zoom-out-up">
+    <div class="col-md-5">
+      <div class="row g-0 border rounded overflow-hidden flex-md-row shadow-sm position-relative"
+           style="max-width: 600px; margin: 0 auto; font-size: 0.9rem;">
+        <div class="col p-3 d-flex flex-column position-static">
+          <strong class="mb-1 text-primary-emphasis" style="font-size: 1.2rem;">Environmental Responsibility Policy</strong>
+          <p class="card-text mb-auto" style="font-size: 0.9rem;">
+            <i>our policy ensures eco-friendly practices that protect nature, wildlife, and future generations every journey.</i>
+          </p>
+           <a href="#" class="icon-link gap-1 icon-link-hover stretched-link" 
+   style="font-size: 0.9rem; color: #7CFC00;">
+  Continue reading
+  <svg class="bi" aria-hidden="true"><use xlink:href="#chevron-right"></use></svg>
+</a>
+        </div>
+        <div class="col-auto d-none d-lg-block">
+          <img src="/frontend/images/responsible.jpg" alt="Eco Trek Image" width="190" height="198" class="rounded-end">
+        </div>
+      </div>
+    </div>
+    </div>
+
+   
+       <!-- Card 3 -->
+   <div data-aos="zoom-out-up">
+    <div class="col-md-5">
+      <div class="row g-0 border rounded overflow-hidden flex-md-row shadow-sm position-relative"
+           style="max-width: 600px; margin: 0 auto; font-size: 0.9rem;">
+        <div class="col p-3 d-flex flex-column position-static">
+          <strong class="mb-1 text-primary-emphasis" style="font-size: 1.2rem;">Digital Safety & Connectivity Policy</strong>
+          <p class="card-text mb-auto" style="font-size: 0.9rem;">
+            <i> Stay informed—limited connectivity zones are planned for, ensuring communication protocols remain reliable in remote areas.</i>
+          </p>
+           <a href="#" class="icon-link gap-1 icon-link-hover stretched-link" 
+   style="font-size: 0.9rem; color: #7CFC00;">
+  Continue reading
+  <svg class="bi" aria-hidden="true"><use xlink:href="#chevron-right"></use></svg>
+</a>
+        </div>
+        <div class="col-auto d-none d-lg-block">
+          <img src="/frontend/images/connection.jpg" alt="Eco Trek Image" width="190" height="198" class="rounded-end">
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+
+  </div>
+</div>
+
+
+  </div>
+</div>
+
+      </div>
+    </div>
+      </div>
+</section>
+<div class="mainSectionsBgGrayExplore"><div class="mainSectionsTitle"><h2 class="mainSectionsTitle text-black">Experience yourself</h2><div class="swiper swiperMain swiper-initialized swiper-horizontal swiper-backface-hidden" style="padding-bottom: 20px;"><div class="swiper-wrapper" id="swiper-wrapper-17e431faa5a5977b" aria-live="polite" style="transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><div class="swiper-slide swiper-slide-active" role="group" aria-label="1 / 5" style="width: 347.429px; margin-right: 40px;"><div class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root mainSectionCardExlpore css-1pv5hwy"><p><iframe width="300" height="169" src="https://www.youtube.com/embed/2pFzvsTDioA?si=_fUK7XBf5XcCXAA2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""></iframe></p></div></div><div class="swiper-slide swiper-slide-next" role="group" aria-label="2 / 5" style="width: 347.429px; margin-right: 40px;"><div class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root mainSectionCardExlpore css-1pv5hwy"><p><iframe width="300" height="169" src="https://www.youtube.com/embed/6CplA7Fxcj8?si=1JWiRchvje8db2qm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""></iframe></p></div></div><div class="swiper-slide" role="group" aria-label="3 / 5" style="width: 347.429px; margin-right: 40px;"><div class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root mainSectionCardExlpore css-1pv5hwy"><p><iframe width="300" height="169" src="https://www.youtube.com/embed/0PdbTmsx8tA?si=pSvJb9JKQgH1Jch7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""></iframe></p></div></div><div class="swiper-slide" role="group" aria-label="4 / 5" style="width: 347.429px; margin-right: 40px;"><div class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root mainSectionCardExlpore css-1pv5hwy"><p><iframe width="300" height="169" src="https://www.youtube.com/embed/ipSJS2iYtk0?si=reEapOWpVdQ9q2yq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""></iframe></p></div></div><div class="swiper-slide" role="group" aria-label="5 / 5" style="width: 347.429px; margin-right: 40px;"><div class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root mainSectionCardExlpore css-1pv5hwy"><p><iframe width="300" height="169" src="https://www.youtube.com/embed/zsEUylO2vFE?si=ijUpNtkgV0L9GTsC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""></iframe></p></div></div></div><div class="swiper-scrollbar swiper-scrollbar-horizontal" style="transition-duration: 0ms;"><div class="swiper-scrollbar-drag" style="transform: translate3d(0px, 0px, 0px); transition-duration: 0ms; width: 894.84px;"></div></div><span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div></div></div>
+
+
+<!-- Optional animation -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init({ duration: 1000 });
+</script>
+
+
+
+<footer class ="bg-black text-white  p-3 sticky bottom py-4">
+    <div class="container px-4">
+      <div class="row">
+        <div class="col-6 col-lg-4">
+        <a class="navbar-brand d-flex align-items-center" href="#">
+        <img src="images/logo3.png" alt="Logo" width="70" height="45" class="me-2">
+        <div class="border">
+        <h2 class="m-0 text-white fw-bold">Mountain Hikes</h2>
+        </div>
+      </a><br>
+          <p><i>At Mountain Hikes, every step takes you closer to nature, every climb reveals your strength, and every summit tells a story worth remembering.</i></p>
+          <p><i>#Life is a mountain, so keep hiking higher.</i></p>
+           <div class="mb-0 bi bi-telephone">
+            91-2315489792/91-0987456129
+          </div>
+          <div class="mb-0 bi bi-envelope">
+            Mounatinhikes@gmail.com
+          </div>
+        </div>
+        <div class="col">
+          <h4 pt-3 fw-bold style="border-bottom: 3px solid #0dcaf0; display: inline-block; padding-bottom: 5px;">Customers</h4>
+          <ul class="list-unstyled">
+            <li><a href="#" class="text-decoration-none text-light">Buyer</a></li>
+                <li><a href="#" class= "text-decoration-none text-light">Supplier</a></li>
+                        </ul>
+     
+        </div>
+        <div class="col">
+          <h4 pt-3 fw-bold style="border-bottom: 3px solid #0dcaf0; display: inline-block; padding-bottom: 5px;">Company</h4>
+           <ul class="list-unstyled">
+           <li><a href="#about" class= "text-decoration-none text-light">About us</a></li>
+                <li><a href="#" class= "text-decoration-none text-light">Careers</a></li>
+               <li><a href="#" class= "text-decoration-none text-light">Contact us</a></li>
+                  </ul>     
+                    </div>
+
+
+        <div class="col">
+          <h4 pt-3 fw-bold style="border-bottom: 3px solid #0dcaf0; display: inline-block; padding-bottom: 5px;">Futher Information</h4>
+           <ul class="list-unstyled">
+           <li><a href="#Policies" class= "text-decoration-none text-light ">Terms & Conditions</a></li>
+                    <li><a href="images/essentials.jpg" class= "text-decoration-none text-light">Hiking Essentials</a></li>
+                     <li><a href="images/do & don'ts.jpg" class= "text-decoration-none text-light">Do & Don't</a></li>
+                        </ul>
+                           </div>
+        <div class="col-6 col-lg-3 text-lg ">
+          <h4 pt-3 fw-bold style="border-bottom: 3px solid #0dcaf0; display: inline-block; padding-bottom: 5px;">Follow us</h4>
+          <div>
+            <a href="https://www.instagram.com/"  class= "text-decoration-none text-light"><i class="bi bi-instagram fs-2 me-3"></i></a>
+              <a href="https://www.facebook.com/"  class= "text-decoration-none text-light"><i class="bi bi-facebook fs-2 me-3"></i></a>
+                <a href="https://www.pinterest.com/"  class= "text-decoration-none text-light"><i class="bi bi-pinterest fs-2 me-3"></i></a>
+                  <a href="https://www.linkedin.com/"  class= "text-decoration-none text-light"><i class="bi bi-linkedin fs-2 "></i></a><br>
+                   <a href="https://www.twitter.com/"  class= "text-decoration-none text-light"><i class="bi bi-twitter fs-2 me-3"></i></a>
+         
+           <div class="spinner-grow text-primary" role="status">
+             <span class="visually-hidden">Loading...</span>
+           </div>
+           <div class="spinner-grow text-danger" role="status">
+           <span class="visually-hidden">Loading...</span>
+           </div>
+           <div class="spinner-grow text-warning" role="status">
+           <span class="visually-hidden">Loading...</span>
+           </div>
+          </div>
+           </div>
+    
+      </div>
+      <div>
+      </div>
+      <hr>
+      <div class="d-flex justify-content-between">
+      <p> copyrights &copy; 2025 Mountain Hikes. All rights reserved 
+            </p>
+            <div class="d-flex">
+            <a href="#" class="text-decoration-none text-light me-4">Terms of use</a>
+              <a href="#" class="text-decoration-none text-light">Privacy Policy</a> 
+      </div>
+    </div>
+     
+   </footer>
+
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+
+
+      <!-- AOS JS -->
+       <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+       
+  <!-- Initialize AOS -->
+      <script>
+    AOS.init();
+  </script>
+    <script src="script.js"></script>
+    <script src="search.js"></script>
+  </body>
+</html>
