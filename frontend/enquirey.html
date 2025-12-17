@@ -163,49 +163,5 @@
     </div>
   </div>
 
-  <!-- ========== FIREBASE SCRIPT ========== -->
-  <script type="module">
-
-    import { db } from "./firebase-config.js";
-    import { collection, addDoc } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
-
-    const form = document.getElementById("inquiryForm");
-    const btn = document.getElementById("submitBtn");
-
-    const modal = document.getElementById("successModal");
-    const closeModal = document.getElementById("closeModal");
-
-    closeModal.onclick = () => (modal.style.display = "none");
-
-    form.addEventListener("submit", async (e) => {
-      e.preventDefault();
-
-      btn.classList.add("loading");
-
-      try {
-        await addDoc(collection(db, "inquiries"), {
-          name: name.value,
-          email: email.value,
-          phone: phone.value,
-          destination: destination.value,
-          difficulty: difficulty.value,
-          date: date.value,
-          message: message.value,
-          timestamp: new Date().toISOString()
-        });
-
-        form.reset();
-        modal.style.display = "flex"; // 🌟 show popup
-
-      } catch (err) {
-        alert("Error saving inquiry.");
-        console.error(err);
-      }
-
-      btn.classList.remove("loading");
-
-    });
-  </script>
-
 </body>
 </html>
