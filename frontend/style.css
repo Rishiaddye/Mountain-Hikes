@@ -1335,4 +1335,472 @@ section[id*="Safety"] ~ .cards-wrapper .card {
     font-size: 0.9rem;
   }
 }
+/* =========================
+   FIXED NAVBAR BASE
+========================= */
+body {
+  padding-top: 90px;
+}
+
+.banner_header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 9999;
+
+  /* Background image */
+  background-image: url("images/header.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  backdrop-filter: blur(6px);
+  min-height: 75px;
+}
+
+/* Dark overlay for readability */
+.banner_header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55); /* adjust darkness */
+  z-index: 1;
+}
+
+/* Keep navbar content above overlay */
+.banner_header nav {
+  position: relative;
+  z-index: 2;
+}
+
+/* Force text to stay white */
+.banner_header,
+.banner_header a,
+.banner_header span,
+.banner_header button {
+  color: #fff !important;
+}
+
+
+/* NAV LINKS */
+.navbar-nav .nav-link {
+  color: #fff !important;
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 6px 14px;
+}
+
+/* LOGO TEXT */
+.navbar-brand span {
+  color: #fff;
+}
+
+/* =========================
+   SEARCH BAR (CLEAN)
+========================= */
+.search-location-container {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border-radius: 30px;
+  padding: 4px 10px;
+  height: 34px;
+  max-width: 180px;
+}
+
+.search-input {
+  border: none;
+  outline: none;
+  font-size: 11px;
+  width: 100px;
+}
+
+.search-icon-container,
+.location-section {
+  width: 22px;
+  height: 22px;
+  background: #00843d;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search-icon-container svg,
+.location-section svg {
+  width: 12px;
+  height: 12px;
+  color: white;
+}
+
+/* =========================
+   LAPTOP OPTIMIZATION
+========================= */
+@media (min-width: 992px) {
+  .navbar {
+    padding: 15px 0;
+  }
+
+  .navbar-brand span {
+    font-size: 1.4rem;
+  }
+
+  .header_right {
+    font-size: 0.85rem;
+  }
+}
+
+/* =========================
+   MOBILE FIXES
+========================= */
+@media (max-width: 991px) {
+  .navbar-nav {
+    margin-top: 10px;
+  }
+
+  .search-location-container {
+    max-width: 220px;
+  }
+}
+
+/* =========================
+   LIGHT MODE NAVBAR FIX
+========================= */
+
+body.light-mode .banner_header {
+  background-image: none;
+  background-color: #f5f5f5;
+}
+
+body.light-mode .banner_header::before {
+  background: rgba(255, 255, 255, 0.6);
+}
+
+/* Make text visible in light mode */
+body.light-mode .banner_header,
+body.light-mode .banner_header a,
+body.light-mode .banner_header span,
+body.light-mode .banner_header button {
+  color: #111 !important;
+}
+
+/* Search bar fix in light mode */
+body.light-mode .search-location-container {
+  background: #ffffff;
+  border: 1px solid #ccc;
+}
+
+/* Register button visibility */
+body.light-mode .btn-outline-primary {
+  color: #0d6efd;
+  border-color: #0d6efd;
+}
+
+/* =========================
+   MOBILE VIDEO CAROUSEL FIX
+========================= */
+
+@media (max-width: 768px) {
+
+  /* Reduce carousel height on mobile */
+  #carouselExampleCaptions,
+  #carouselExampleCaptions .carousel-inner,
+  #carouselExampleCaptions .carousel-item {
+    height: 65vh;
+  }
+
+  /* Prevent aggressive video cropping */
+  #carouselExampleCaptions video {
+    object-fit: cover;
+    object-position: center top;
+  }
+
+  /* Center & shrink caption */
+  #carouselExampleCaptions .carousel-caption {
+    left: 5%;
+    right: 5%;
+    bottom: 8%;
+    padding: 16px;
+    text-align: center;
+  }
+
+  /* Headings scale properly */
+  #carouselExampleCaptions h5 {
+    font-size: 1.6rem;
+    line-height: 1.2;
+  }
+
+  #carouselExampleCaptions p {
+    font-size: 0.95rem;
+  }
+}
+/* =========================
+   MOBILE CAROUSEL TEXT FIX
+========================= */
+
+@media (max-width: 768px) {
+
+  /* Center caption properly */
+  #carouselExampleCaptions .carousel-caption {
+    left: 46% !important;
+    right: auto !important;
+    bottom: 10% !important;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 340px;
+    padding: 14px 16px;
+    text-align: center;
+    border-radius: 12px;
+  }
+
+  /* Fix main heading breaking */
+  #carouselExampleCaptions .carousel-caption h5 {
+    font-size: 1.4rem;
+    line-height: 1.25;
+    white-space: normal;
+    word-break: keep-all;
+    margin-bottom: 8px;
+  }
+
+  /* Subtitle text */
+  #carouselExampleCaptions .carousel-caption p {
+    font-size: 0.9rem;
+    line-height: 1.4;
+    margin-bottom: 12px;
+  }
+
+  /* Button size for mobile */
+  #carouselExampleCaptions .carousel-caption .btn {
+    font-size: 0.85rem;
+    padding: 8px 14px;
+  }
+}
+/* =========================
+   MOBILE TREKS CARD FIX
+========================= */
+
+@media (max-width: 768px) {
+
+  /* Section container */
+  .treks-section,
+  .treks-container,
+  .trek-cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Individual trek card */
+  .trek-card,
+  .card {
+    width: 92% !important;
+    max-width: 360px;
+    margin: 0 auto 20px auto;
+  }
+
+  /* Fix heading alignment */
+  .treks-section h2,
+  .treks-section h3,
+  .treks-title {
+    text-align: center;
+  }
+}
+
+/* =========================
+   MOBILE – CENTER DESTINATION CARDS
+========================= */
+
+@media (max-width: 768px) {
+
+  /* Center the whole grid */
+  .gallery-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;     /* 👈 centers cards */
+    gap: 14px;
+  }
+
+  /* Center individual cards */
+  .gallery-item {
+    width: 90%;              /* 👈 nice mobile width */
+    max-width: 320px;
+    margin: 0 auto;          /* 👈 hard center */
+  }
+
+  /* Center overlay text */
+  .gallery-overlay {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+}
+/* =========================
+   MOBILE FIX: MOUNTAIN HIKE DESTINATIONS
+========================= */
+@media (max-width: 768px) {
+
+  /* Section padding reduced */
+  .gallery {
+    padding: 30px 0;
+  }
+
+  /* Heading */
+  .gallery-title {
+    font-size: 1.6rem;
+    text-align: center;
+    line-height: 1.2;
+    margin-bottom: 8px;
+  }
+
+  /* Subtitle */
+  .subtitle {
+    font-size: 0.85rem;
+    text-align: center;
+    line-height: 1.4;
+    padding: 0 14px;
+    margin-bottom: 20px;
+  }
+
+  /* Grid becomes single column & centered */
+  .gallery-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+  }
+
+  /* Cards smaller & centered */
+  .gallery-item {
+    width: 90%;
+    max-width: 300px;
+    height: 180px;
+    border-radius: 14px;
+    overflow: hidden;
+  }
+
+  /* Image fits card properly */
+  .gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  /* Overlay text smaller */
+  .gallery-overlay h2,
+  .gallery-overlay h3 {
+    font-size: 1rem;
+  }
+
+  .gallery-overlay h6,
+  .gallery-overlay p {
+    font-size: 0.75rem;
+  }
+}
+/* ===============================
+   MOBILE FIX – DESTINATION HEADING LINE
+================================= */
+@media (max-width: 768px) {
+
+  /* Center the heading properly */
+  .gallery .gallery-title {
+    font-size: 1.4rem;          /* smaller for mobile */
+    text-align: center;
+    margin-bottom: 8px;
+  }
+
+  /* Fix the underline line */
+  .gallery .underline {
+    width: 60px;                /* shorter line */
+    height: 3px;
+    margin: 6px auto 10px;      /* center horizontally */
+    background-color: #0dcaf0;  /* same cyan */
+    border-radius: 10px;
+  }
+
+  /* Subtitle text under heading */
+  .gallery .subtitle {
+    font-size: 0.85rem;
+    line-height: 1.4;
+    text-align: center;
+    padding: 0 12px;
+    margin-bottom: 16px;
+  }
+}
+/* ===============================
+   FOOTER MOBILE FIX (SMALL SCREENS)
+================================= */
+@media (max-width: 576px) {
+
+  footer .row {
+    text-align: center;
+  }
+
+  /* Logo + description */
+  footer .navbar-brand {
+    justify-content: center;
+  }
+
+  footer p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+
+  /* Footer columns stack nicely */
+  footer .col,
+  footer .col-6,
+  footer .col-lg-4,
+  footer .col-lg-3 {
+    width: 100% !important;
+    margin-bottom: 20px;
+  }
+
+  /* Section headings */
+  footer h4 {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+  }
+
+  /* Footer links */
+  footer ul {
+    padding-left: 0;
+  }
+
+  footer ul li {
+    margin-bottom: 6px;
+  }
+
+  footer ul li a {
+    font-size: 0.9rem;
+  }
+
+  /* Contact info alignment */
+  footer .bi-telephone,
+  footer .bi-envelope {
+    display: block;
+    margin: 6px 0;
+    font-size: 0.9rem;
+  }
+
+  /* Social icons center */
+  footer .bi-instagram,
+  footer .bi-facebook,
+  footer .bi-pinterest,
+  footer .bi-linkedin,
+  footer .bi-twitter {
+    font-size: 1.6rem;
+    margin: 8px;
+  }
+
+  /* Bottom copyright bar */
+  footer .d-flex.justify-content-between {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+
+  footer .d-flex.justify-content-between a {
+    margin: 0 8px;
+    font-size: 0.85rem;
+  }
+}
 

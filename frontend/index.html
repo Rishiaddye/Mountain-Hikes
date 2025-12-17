@@ -17,74 +17,80 @@
 
   <body class="bg-black" >
     
-    <header id="full_name" class="banner_header">
-  <nav class="navbar navbar-expand-lg py-3 ">
-    <div class="container-fluid px-5">
-      
-      <!-- Logo -->
-      <a class="navbar-brand d-flex align-items-center" href="#">
-        <img src="images/logo3.png" alt="Logo" width="70" height="45" class="me-2">
-        <h2 class="m-0 text-white fw-bold">Mountain Hikes</h2>
+ <header id="full_name" class="banner_header fixed-top">
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container-fluid px-4">
+
+      <!-- LOGO -->
+      <a class="navbar-brand d-flex align-items-center gap-2" href="#">
+        <img src="images/logo3.png" alt="Logo" width="60" height="40">
+        <span class="fw-bold fs-4">Mountain Hikes</span>
       </a>
 
-      <!-- Mobile Toggle -->
-      <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <!-- TOGGLER -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+        data-bs-target="#navbarNav" aria-controls="navbarNav"
+        aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
 
-      <!-- Nav Links -->
+      <!-- NAV CONTENT -->
       <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav mx-auto">
+
+        <!-- LINKS -->
+        <ul class="navbar-nav mx-auto text-center">
           <li class="nav-item"><a class="nav-link active" href="#">HOME</a></li>
-          <li class="nav-item"><a class="nav-link" href="#Our Safety Rules & Precautions">OUR SAFETY RULES & PRECAUTIONS</a></li>
+          <li class="nav-item">
+            <a class="nav-link" href="#Our Safety Rules & Precautions">
+              SAFETY RULES
+            </a>
+          </li>
           <li class="nav-item"><a class="nav-link" href="#about">ABOUT</a></li>
           <li class="nav-item"><a class="nav-link" href="#Policies">POLICIES</a></li>
-          <li class="nav-item"><a class="nav-link" href="#Policies"></a></li>
-        <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="register.html"> <button type="button" class="btn btn-outline-primary">Register now</button></a>
-            </li>
-       
-       
+          <li class="nav-item mt-2 mt-lg-0">
+            <a href="register.html" class="nav-link">
+              <button class="btn btn-outline-primary btn-sm">
+                Register Now
+              </button>
+            </a>
+          </li>
         </ul>
 
-          <!-- search bar -->
-<section class="search-bar">  <!-- added Bootstrap class to move left -->
-  <form class="d-flex" role="search">
-    <div class="search-location-container">
-      <div class="location-section">
-        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512">
-          <path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" 
-                d="M256 48c-79.5 0-144 61.39-144 137 0 87 96 224.87 131.25 272.49a15.77 15.77 0 0025.5 0C304 409.89 400 272.07 400 185c0-75.61-64.5-137-144-137z"></path>
-          <circle cx="256" cy="192" r="48" fill="none" stroke-linecap="round" 
-                  stroke-linejoin="round" stroke-width="32"></circle>
-        </svg>
-      </div>
+        <!-- RIGHT SIDE -->
+        <div class="d-flex flex-column flex-lg-row align-items-center gap-3">
 
-      <div class="search-section">
-        <div class="typewriter-container">
-          <input type="text" class="search-input" placeholder="Search destinations..." aria-label="Search destinations">
-          <div class="typewriter-text">Baku<span class="typewriter-cursor">|</span></div>
-        </div>
-        <div class="search-icon-container">
-          <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512">
-            <path d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"></path>
-          </svg>
-        </div>
-      </div>
-    </div>
-  </form>
-</section>
+          <!-- SEARCH -->
+          <form class="d-flex justify-content-center">
+            <div class="search-location-container">
+              <div class="location-section">
+                <svg viewBox="0 0 512 512">
+                  <circle cx="256" cy="192" r="48"
+                    fill="none" stroke="currentColor" stroke-width="32"></circle>
+                </svg>
+              </div>
+              <input class="search-input" type="text"
+                placeholder="Search destinations...">
+              <div class="search-icon-container">
+                <svg viewBox="0 0 512 512">
+                  <circle cx="208" cy="208" r="80"></circle>
+                </svg>
+              </div>
+            </div>
+          </form>
 
-        <!-- Right Side Contact -->
-        <div class="header_right text-lg-end text-center mt-2 mt-lg-0">
-          <span class="call_text">Call Us!</span><br>
-          <span class="phone_no">+91 7684321980</span>
+          <!-- CALL -->
+          <div class="header_right text-center text-lg-end">
+            <small class="d-block">Call Us!</small>
+            <strong>+91 7684321980</strong>
+          </div>
+
         </div>
       </div>
     </div>
   </nav>
 </header>
+
+
 <div class="top-banner">
 <p>
   <a href="enquirey.html" style="color: white; text-decoration: none; cursor: pointer;">
@@ -369,7 +375,7 @@
         <!-- Card 1 -->
         <div data-aos="zoom-in-left">   
         <div class="card border-0 shadow-lg p-3 bg-light hover-shadow" style="width: 18rem;">
-          <img src="/21.jpg" class="card-img-top rounded-4" alt="Eco Friendly Trek" />
+          <img src="./21.jpg" class="card-img-top rounded-4" alt="Eco Friendly Trek" />
           <div class="card-body">
             <h4 class="fw-bold mt-3">Eco-Friendly</h4>
             <p class="text-muted"><i>We respect nature and follow Leave No Trace principles on all treks.</i></p>
@@ -381,7 +387,7 @@
         <!-- Card 2 -->
          <div data-aos="zoom-in-right">
         <div class="card border-0 shadow-lg p-3 bg-light hover-shadow " style="width: 18rem;">
-          <img src="/35.jpg" class="card-img-top rounded-4" alt="Expert Guidance" />
+          <img src="./35.jpg" class="card-img-top rounded-4" alt="Expert Guidance" />
           <div class="card-body">
             <h4 class="fw-bold mt-3">Expert Guidance</h4>
             <p class="text-muted"><i>Led by experienced trekkers to keep your adventure safe and memorable.</i></p>
@@ -411,7 +417,7 @@
         <!-- Card 3 -->
          <div data-aos="zoom-in-left">  
         <div class="card border-0 shadow-lg p-3 bg-light hover-shadow" style="width: 18rem;">
-          <img src="/36.jpg" class="card-img-top rounded-4" alt="Trekking Community" />
+          <img src="./36.jpg" class="card-img-top rounded-4" alt="Trekking Community" />
           <div class="card-body">
             <h4 class="fw-bold mt-3">Community</h4>
             <p class="text-muted"><i>Meet fellow trekking enthusiasts and create lifelong connections.</i></p>
@@ -422,7 +428,7 @@
                <!-- Card 4 -->
                    <div data-aos="zoom-in-right">
         <div class="card border-0 shadow-lg p-3 bg-light hover-shadow" style="width: 18rem;">
-          <img src="images/happy for all.jpg" class="card-img-top rounded-4" alt="Expert Guidance" />
+          <img src="./images/happy for all.jpg" class="card-img-top rounded-4" alt="Expert Guidance" />
           <div class="card-body">
             <h4 class="fw-bold mt-3">Adventure for All</h4>
             <p class="text-muted"><i>Led by experienced trekkers to keep your adventure safe and memorable.</i></p>
@@ -752,7 +758,7 @@
 </a>
         </div>
         <div class="col-auto d-none d-lg-block">
-          <img src="/frontend/images/responsible.jpg" alt="Eco Trek Image" width="190" height="198" class="rounded-end">
+          <img src="images/responsible.jpg" alt="Eco Trek Image" width="190" height="198" class="rounded-end">
         </div>
       </div>
     </div>
@@ -776,7 +782,7 @@
 </a>
         </div>
         <div class="col-auto d-none d-lg-block">
-          <img src="/frontend/images/connection.jpg" alt="Eco Trek Image" width="190" height="198" class="rounded-end">
+          <img src="images/connection.jpg" alt="Eco Trek Image" width="190" height="198" class="rounded-end">
         </div>
        </div>
       </div>
